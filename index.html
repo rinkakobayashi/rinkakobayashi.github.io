@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rinka Kobayashi</title>
+  <style>
+    :root{ --bg:#0b0b0c; --fg:#f2f2f2; --muted:rgba(242,242,242,.75); }
+    body{
+      margin:0; min-height:100vh;
+      background:var(--bg); color:var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    .wrap{ width:min(980px, 92vw); margin:0 auto; padding:56px 0; }
+    .tag{ display:inline-block; padding:6px 10px; border:1px solid rgba(242,242,242,.2);
+      border-radius:999px; font-size:12px; letter-spacing:.06em; }
+    h1{ margin:14px 0 8px; font-size:48px; letter-spacing:.02em; }
+    p{ margin:0 0 22px; color:var(--muted); line-height:1.7; }
+    .links{ display:flex; gap:16px; flex-wrap:wrap; }
+    a{ color:var(--fg); text-decoration:none; border-bottom:1px solid rgba(242,242,242,.35); }
+    a:hover{ border-bottom-color:rgba(242,242,242,.95); }
+  </style>
 </head>
 <body>
-  <h1>Hello Rinka</h1>
+  <div class="wrap">
+    <span class="tag">PORTFOLIO</span>
+    <h1>Rinka Kobayashi</h1>
+    <p>Generative + Design / Visual experiments.<br>（ここに一言コピーを入れる）</p>
+    <div class="links">
+      <a href="https://rinkakobayashi.github.io" target="_blank" rel="noreferrer">GitHub Pages</a>
+      <a href="#" target="_blank" rel="noreferrer">Instagram</a>
+      <a href="#" target="_blank" rel="noreferrer">Contact</a>
+    </div>
+  </div>
 </body>
 </html>
