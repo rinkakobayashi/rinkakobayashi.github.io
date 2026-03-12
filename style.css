@@ -627,3 +627,60 @@ a {
 }
 
 }
+@media (max-width: 768px) {
+  .site-wrap{
+    display:block;
+    padding:24px 20px 40px;
+  }
+
+  .sidebar{
+    width:100%;
+    max-width:100%;
+    margin:0 auto 32px;
+  }
+
+  .name-bubble{
+    display:block;
+    width:fit-content;
+    margin:0 auto 28px;
+  }
+
+  .name-bubble img{
+    width:220px;
+    height:auto;
+    display:block;
+  }
+
+  .face-panel{
+    width:fit-content;
+    max-width:240px;
+    margin:0 auto 28px;
+    padding:0;
+    border:none;
+    background:transparent;
+    display:block;
+  }
+
+  .face-panel img{
+    display:block;
+    width:100%;
+    max-width:240px;
+    height:auto;
+    border:1px solid #222;
+    box-sizing:border-box;
+  }
+
+  .sidebar-bottom{
+    width:100%;
+    max-width:240px;
+    margin:0 auto;
+  }
+
+  .menu{
+    margin-bottom:20px;
+  }
+
+  .main-grid{
+    margin-top:0;
+  }
+}
