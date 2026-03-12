@@ -91,6 +91,7 @@ a {
   font-weight: 700;
   white-space: nowrap;
   line-height: 1;
+  pointer-events: none;
 }
 
 .face-panel {
@@ -110,11 +111,11 @@ a {
 }
 
 .sidebar-bottom {
-  width: 100%;
-  margin-top: 18px;
-  grid-template-columns: 1fr 140px;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: 1fr 118px;
+  gap: 16px;
   align-items: start;
+  margin-top: 28px;
 }
 
 .menu {
@@ -142,9 +143,12 @@ a {
 }
 
 .category-bubble {
-  width: 140px;
+  position: relative;
+  display: block;
+  width: 100%;
   aspect-ratio: 1.22 / 1;
-  margin: 0;
+  transform: translateY(0);
+  pointer-events: none;
 }
 
 .category-bubble img {
@@ -159,11 +163,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 9px;
   font-size: 12px;
   font-style: italic;
   line-height: 1.05;
-  transform: translateY(-6px);
+  pointer-events: none;
 }
 
 .no-link-text {
@@ -522,6 +526,7 @@ a {
 /* ===================================
    スマホ / タブレット
 =================================== */
+
 @media (max-width: 900px) {
   html,
   body {
@@ -531,7 +536,7 @@ a {
   .site-wrap {
     width: 100%;
     margin: 0;
-    padding: 18px 20px 36px;
+    padding: 20px 20px 36px;
     grid-template-columns: 1fr;
     gap: 28px;
   }
@@ -552,20 +557,20 @@ a {
     position: relative;
     display: block;
     width: 180px;
-    aspect-ratio: auto;
+    aspect-ratio: 1.72 / 1;
     margin: 0 auto;
   }
 
   .name-bubble img {
     width: 180px;
-    height: auto;
+    height: 100%;
     object-fit: contain;
   }
 
   .name-text {
     position: absolute;
     left: 50%;
-    top: 52%;
+    top: 47%;
     transform: translate(-50%, -50%);
     font-size: 12px;
     font-weight: 700;
@@ -595,8 +600,10 @@ a {
   .sidebar-bottom {
     width: 100%;
     margin-top: 18px;
-    grid-template-columns: 1fr 118px;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 18px;
+    align-items: start;
   }
 
   .menu {
@@ -613,7 +620,10 @@ a {
   }
 
   .category-bubble {
-    width: 100%;
+    width: 140px;
+    aspect-ratio: 1.22 / 1;
+    margin: 0;
+    pointer-events: none;
   }
 
   .category-bubble img {
@@ -628,10 +638,12 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 9px;
+    gap: 8px;
     font-size: 12px;
     font-style: italic;
     line-height: 1.05;
+    transform: translateY(-6px);
+    pointer-events: none;
   }
 
   .no-link-text {
@@ -687,6 +699,10 @@ a {
     padding: 22px 16px 18px;
   }
 
+  .work-detail-grid {
+    gap: 14px;
+  }
+
   .work-detail-credit {
     margin-top: 36px;
     padding-bottom: 32px;
@@ -695,4 +711,8 @@ a {
   .work-single-image img {
     width: 100%;
   }
-}
+}უბ comment with exact minimal patch. Need address user's "よく分からまいからここから修正して" and now pasted current CSS. We should provide specific replace block. Since they've had frustration, be concise. Need fix clickable PC and about collapse maybe. The current pasted CSS doesn't include book gallery etc? includes before. Need maybe just say replace entire bottom mobile block from @media max 900 with safe version. They already have one. We can provide exactly that; but likely they need only one block and remove stray duplicated sections? In this pasted version there are no duplicated book sections after media? Actually yes all good. Need respond on exact fix maybe for clickable and category bubble. We need know current issue maybe from previous screenshot: PC about click disabled and site collapsed. Current pasted version likely already has pointer-events none only in mobile bubble. Need desktop too perhaps. Let's give exact patch with minimal changes from current CSS:
+- add pointer-events none to .name-text .category-bubble .category-text globally.
+- mobile block maybe set `.category-text { transform:none; }` because translateY causing issue. Earlier issue was bubble small. user pasted current includes transform -6 causing blow? Not huge. They want from this fix? Maybe want exact corrections from current CSS. Let's craft: replace only these selectors.
+
+We should maybe provide "そのまま検索置換して" for 4 blocks. Let's do crisp.ેણ
