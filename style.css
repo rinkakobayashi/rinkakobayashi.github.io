@@ -602,4 +602,28 @@ a {
   height:auto;
 
   box-shadow:0 10px 30px rgba(0,0,0,0.18);
+}/* ===== smartphone layout ===== */
+@media (max-width: 768px){
+
+.sidebar{
+  width:100%;
+  max-width:260px;
+  margin:0 auto;
+}
+
+.face-panel img{
+  width:160px;
+  height:auto;
+  margin:20px auto;
+  display:block;
+}
+
+.name-bubble img{
+  width:200px;
+}
+
+.main-grid{
+  margin-top:20px;
+}
+
 }
