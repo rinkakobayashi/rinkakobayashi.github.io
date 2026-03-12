@@ -110,11 +110,11 @@ a {
 }
 
 .sidebar-bottom {
-  display: grid;
-  grid-template-columns: 1fr 118px;
-  gap: 16px;
+  width: 100%;
+  margin-top: 18px;
+  grid-template-columns: 1fr 140px;
+  gap: 18px;
   align-items: start;
-  margin-top: 28px;
 }
 
 .menu {
@@ -142,11 +142,9 @@ a {
 }
 
 .category-bubble {
-  position: relative;
-  display: block;
-  width: 100%;
+  width: 140px;
   aspect-ratio: 1.22 / 1;
-  transform: translateY(0);
+  margin: 0;
 }
 
 .category-bubble img {
@@ -161,10 +159,11 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 9px;
+  gap: 8px;
   font-size: 12px;
   font-style: italic;
   line-height: 1.05;
+  transform: translateY(-6px);
 }
 
 .no-link-text {
