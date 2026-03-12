@@ -611,12 +611,13 @@ a {
   margin: 0 auto;
 }
 
- .category-text {
+.category-text {
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transform: translateY(-10px);   /* ←これ追加 */
   gap: 6px;
   font-size: 11px;
   font-style: italic;
