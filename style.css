@@ -617,7 +617,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translateY(-8px);   /* ←これ追加 */
+  transform: translateY(-2px);   /* ←これ追加 */
   gap: 6px;
   font-size: 11px;
   font-style: italic;
